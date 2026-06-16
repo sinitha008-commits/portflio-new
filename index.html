@@ -1383,6 +1383,68 @@ void loop() {
             </div>
           </article>
 
+          <!-- ── DAY 18 ── -->
+          <article class="timeline-item reveal" data-category="iot" id="day-18">
+            <div class="timeline-marker">
+              <div class="day-badge">18</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day18-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 09-10 June 2026</span>
+                  <span class="instructor-badge">⚙️ Phase 03 — IoT & Automation</span>
+                </div>
+                <h3 class="day-title">Data Logging, Remote Control & Automation</h3>
+                <p class="day-summary">Build on sensors and actuators by saving readings, sending data remotely, and automating responses with Arduino-driven IoT workflows.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Data Logging</span>
+                  <span class="topic-tag">Serial</span>
+                  <span class="topic-tag">SD Card</span>
+                  <span class="topic-tag">Bluetooth</span>
+                  <span class="topic-tag">Automation</span>
+                  <span class="topic-tag">IoT</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day18-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>📁 Data Logging Essentials</h4>
+                    <ul>
+                      <li><strong>SD cards</strong> let Arduino store sensor readings locally for later analysis.</li>
+                      <li><strong>File access</strong> with `SD.h`: `SD.begin()`, `SD.open()`, `file.println()` and `file.close()`.</li>
+                      <li><strong>Use case</strong> — log temperature, light, and distance values every second into a CSV file.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔗 Serial & Wireless Data Transfer</h4>
+                    <ul>
+                      <li><strong>Serial Monitor</strong> is the first step for live debugging and data output from Arduino.</li>
+                      <li><strong>Bluetooth / Wi-Fi</strong> can send sensor values to a phone or web dashboard in real time.</li>
+                      <li><strong>MQTT</strong> is a lightweight IoT protocol that makes remote control and telemetry easy.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🤖 Automation Patterns</h4>
+                    <ul>
+                      <li>Read sensor data, compare it against thresholds, and trigger actuators automatically.</li>
+                      <li>Example: turn a fan on when temperature > 30°C, or sweep a servo based on distance readings.</li>
+                      <li>Use `millis()` instead of `delay()` for non-blocking automation loops.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📡 Visualizing & Controlling Remotely</h4>
+                    <ul>
+                      <li>Create a simple dashboard to display temperature, humidity, and light levels from your Arduino.</li>
+                      <li>Add buttons or toggles to the dashboard so you can drive LEDs, motors, or relays from a browser.</li>
+                      <li>Remote monitoring closes the loop: sensor → cloud/dashboard → actuator.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div><!-- /timeline -->
       </div>
     </section>
