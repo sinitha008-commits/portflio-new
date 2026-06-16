@@ -835,6 +835,554 @@
             </div>
           </article>
 
+          <!-- ── DAY 10 ── -->
+          <article class="timeline-item reveal" data-category="digital" id="day-10">
+            <div class="timeline-marker">
+              <div class="day-badge">10</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day10-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 31 May 2026</span>
+                  <span class="instructor-badge">👨‍🏫 Dr. Della Thomas — IIIT Kottayam</span>
+                </div>
+                <h3 class="day-title">Embedded Systems & Microcontrollers</h3>
+                <p class="day-summary">Introduction to embedded systems: definition, traits, microcontroller vs microprocessor, and deep dive into ATmega328P architecture powering Arduino.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Embedded Systems</span>
+                  <span class="topic-tag">Microcontrollers</span>
+                  <span class="topic-tag">ATmega328P</span>
+                  <span class="topic-tag">Architecture</span>
+                  <span class="topic-tag">Arduino</span>
+                  <span class="topic-tag">Real-time Systems</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day10-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🔧 What is an Embedded System?</h4>
+                    <ul>
+                      <li><strong>Definition</strong> — A dedicated computer built into a larger device to do ONE specific job. Examples: washing machines, microwaves, cars, IoT devices.</li>
+                      <li><strong>Key Traits</strong> — Real-time response · Low power consumption · Reliable & long-running · Resource-constrained (limited memory & CPU) · Often runs bare-metal (no OS).</li>
+                      <li><strong>Difference from PCs</strong> — Optimized for a fixed task with tight constraints on power, cost, and size. Not general-purpose.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>⚔️ Microprocessor vs Microcontroller</h4>
+                    <ul>
+                      <li><strong>Microprocessor (μP)</strong> — CPU only. Memory & I/O are external chips. Higher cost. Used in PCs, laptops (Intel Core, Pentium).</li>
+                      <li><strong>Microcontroller (μC)</strong> — Entire computer on ONE chip: CPU + RAM + Flash + I/O. Lower cost. Used for dedicated control tasks (ATmega328P, PIC, ESP32).</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🧠 Inside the Microcontroller</h4>
+                    <ul>
+                      <li><strong>CPU</strong> — The brain. Fetches, decodes, and executes instructions from memory.</li>
+                      <li><strong>Memory</strong> — Flash (stores program), SRAM (stores data/variables), EEPROM (non-volatile storage).</li>
+                      <li><strong>I/O Ports</strong> — Digital & analog pins to talk to sensors, LEDs, motors, displays.</li>
+                      <li><strong>Timers/Counters</strong> — Generate precise timing signals for PWM, clock counting.</li>
+                      <li><strong>ADC (Analog-to-Digital Converter)</strong> — Converts analog voltages (0–5V) into digital numbers (0–1023).</li>
+                      <li><strong>Communication Units</strong> — UART (serial), SPI (fast), I²C (multi-device).</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🎯 ATmega328P — Arduino Uno's Brain</h4>
+                    <ul>
+                      <li><strong>Processor</strong> — 8-bit AVR RISC architecture · 16 MHz clock speed</li>
+                      <li><strong>Memory</strong> — 32 KB Flash (program) · 2 KB SRAM (variables) · 1 KB EEPROM (persistent data)</li>
+                      <li><strong>I/O</strong> — 14 digital pins (6 with PWM) · 6 analog inputs (10-bit ADC)</li>
+                      <li><strong>Communication</strong> — UART (Serial), SPI, I²C interfaces built-in</li>
+                      <li><strong>Real-time Capabilities</strong> — Perfect for IoT & sensor applications with fast response times.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 11 ── -->
+          <article class="timeline-item reveal" data-category="digital" id="day-11">
+            <div class="timeline-marker">
+              <div class="day-badge">11</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day11-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 31 May 2026</span>
+                  <span class="instructor-badge">👨‍🏫 Dr. Della Thomas (Continued)</span>
+                </div>
+                <h3 class="day-title">MCU Architecture, GPIO & Communication Protocols</h3>
+                <p class="day-summary">Memory architecture (Von Neumann vs Harvard), GPIO configuration with pull-ups/pull-downs, serial communication protocols (UART, SPI, I²C), and interrupt-driven design.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Memory Architecture</span>
+                  <span class="topic-tag">GPIO</span>
+                  <span class="topic-tag">UART / SPI / I²C</span>
+                  <span class="topic-tag">Interrupts</span>
+                  <span class="topic-tag">Timers</span>
+                  <span class="topic-tag">ADC</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day11-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>💾 Memory Architecture</h4>
+                    <ul>
+                      <li><strong>Von Neumann</strong> — Program & data share ONE memory + ONE bus. Simpler but slower.</li>
+                      <li><strong>Harvard Architecture</strong> — Separate memory & buses for program and data. Faster. Used by AVR (ATmega328P).</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📍 GPIO — General Purpose Input/Output</h4>
+                    <ul>
+                      <li><strong>Configuration</strong> — Each pin can be set as INPUT (read sensors/buttons) or OUTPUT (drive LEDs/relays) via DDR register.</li>
+                      <li><strong>Pull-up / Pull-down Resistors</strong> — Keep floating inputs at a defined logic level. Prevents unpredictable behavior.</li>
+                      <li><strong>Registers Behind the Scenes</strong> — DDR (Data Direction), PORT, PIN. Arduino functions like `pinMode()` and `digitalWrite()` wrap these.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📡 Serial Communication Protocols</h4>
+                    <ul>
+                      <li><strong>UART (Universal Asynchronous Receiver-Transmitter)</strong> — TX, RX pins. Simple device-to-device serial. Used by Serial Monitor.</li>
+                      <li><strong>SPI (Serial Peripheral Interface)</strong> — MOSI, MISO, SCK, SS pins. Fast & full-duplex. Used for SD cards, displays, sensors.</li>
+                      <li><strong>I²C (Inter-Integrated Circuit)</strong> — SDA, SCL pins. Two-wire. Supports multiple devices on same bus with addresses. Many sensors use I²C.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>⚡ Interrupts, Timers & ADC</h4>
+                    <ul>
+                      <li><strong>Interrupts</strong> — Pause the main loop instantly to handle an urgent event (button press, sensor trigger), then resume execution.</li>
+                      <li><strong>Timers/PWM</strong> — Generate precise delays, count events, and produce PWM signals for dimming LEDs & controlling motor speed.</li>
+                      <li><strong>ADC</strong> — Analog-to-Digital Converter. Turns 0–5V signals into 0–1023 numbers for the CPU to process.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🌉 Bridge to Arduino</h4>
+                    <p>Everything Dr. Della Thomas covered — GPIO, ADC, timers, serial protocols — is exactly what the Arduino IDE wraps in simple functions like `digitalWrite()`, `analogRead()`, `Serial.println()`. Arduino makes embedded systems accessible to beginners.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 12 ── -->
+          <article class="timeline-item reveal" data-category="networks" id="day-12">
+            <div class="timeline-marker">
+              <div class="day-badge">12</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day12-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 01 June 2026</span>
+                  <span class="instructor-badge">👨‍🏫 Dr. S. Venkatesh — Phase 02, Day 1</span>
+                </div>
+                <h3 class="day-title">Networking & Cloud Basics — Part 1: OSI & TCP/IP</h3>
+                <p class="day-summary">Deep dive into networking: 7-layer OSI model, TCP/IP stack, IP/MAC addressing, DNS, TCP vs UDP, and the building blocks of networked systems.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">OSI Model</span>
+                  <span class="topic-tag">TCP/IP</span>
+                  <span class="topic-tag">IP Addressing</span>
+                  <span class="topic-tag">MAC Address</span>
+                  <span class="topic-tag">TCP vs UDP</span>
+                  <span class="topic-tag">Network Topologies</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day12-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🏛️ The OSI Reference Model (7 Layers)</h4>
+                    <ul>
+                      <li><strong>Layer 7 — Application</strong> — User-facing services (HTTP, MQTT, FTP, DNS)</li>
+                      <li><strong>Layer 6 — Presentation</strong> — Encryption, encoding, compression, data formatting</li>
+                      <li><strong>Layer 5 — Session</strong> — Opens, maintains, and closes connections</li>
+                      <li><strong>Layer 4 — Transport</strong> — End-to-end delivery (TCP for reliable, UDP for fast)</li>
+                      <li><strong>Layer 3 — Network</strong> — Routing & IP addressing. Routers work here.</li>
+                      <li><strong>Layer 2 — Data Link</strong> — MAC addressing and frame formatting. Switches work here.</li>
+                      <li><strong>Layer 1 — Physical</strong> — Actual bits over wire/radio (cables, Wi-Fi signals)</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔑 Key Networking Concepts</h4>
+                    <ul>
+                      <li><strong>IP Address</strong> — Logical address of a device (IPv4 = 32-bit like 192.168.1.1, IPv6 = 128-bit)</li>
+                      <li><strong>MAC Address</strong> — Physical hardware address burned into the network card (e.g., 00:1A:2B:3C:4D:5E)</li>
+                      <li><strong>Ports</strong> — Identify a specific service on a device. HTTP=80, HTTPS=443, MQTT=1883, SSH=22.</li>
+                      <li><strong>DNS</strong> — Domain Name System. Resolves human-readable names (google.com) into IP addresses.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>⚖️ TCP vs UDP</h4>
+                    <ul>
+                      <li><strong>TCP (Transmission Control Protocol)</strong> — Connection-oriented. Guarantees delivery in order. Slower. Used for web, email, file transfer.</li>
+                      <li><strong>UDP (User Datagram Protocol)</strong> — Connectionless. Best-effort, no guarantee. Faster. Used for streaming, gaming, DNS queries.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🛠️ Network Devices & Topologies</h4>
+                    <ul>
+                      <li><strong>Devices</strong> — Hub (broadcasts to all ports), Switch (intelligent forwarding by MAC), Router (connects networks), Modem (converts signals), Access Point (Wi-Fi).</li>
+                      <li><strong>Topologies</strong> — Star (central hub), Bus (shared line), Ring (circular), Mesh (every device connects to every other).</li>
+                      <li><strong>Network Scopes</strong> — LAN (local area), WAN (wide area), MAN (metropolitan area).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 13 ── -->
+          <article class="timeline-item reveal" data-category="networks" id="day-13">
+            <div class="timeline-marker">
+              <div class="day-badge">13</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day13-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 02 June 2026</span>
+                  <span class="instructor-badge">👨‍🏫 Dr. S. Venkatesh — Phase 02, Day 2</span>
+                </div>
+                <h3 class="day-title">Networking & Cloud Basics — Part 2: IoT Protocols & Cloud</h3>
+                <p class="day-summary">IoT communication protocols (MQTT, HTTP/REST, CoAP, WebSocket), cloud service models, and IoT platform architecture for scalable, connected systems.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">MQTT</span>
+                  <span class="topic-tag">HTTP / REST</span>
+                  <span class="topic-tag">CoAP</span>
+                  <span class="topic-tag">WebSocket</span>
+                  <span class="topic-tag">Cloud Models</span>
+                  <span class="topic-tag">IoT Platforms</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day13-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🔌 IoT Communication Protocols</h4>
+                    <ul>
+                      <li><strong>MQTT</strong> — Lightweight publish/subscribe over TCP. Ideal for low-bandwidth IoT. Central broker routes messages. Three QoS levels trade speed for delivery guarantees.</li>
+                      <li><strong>HTTP / REST</strong> — Request–response over TCP. Simple but heavier for constrained devices. Most familiar protocol.</li>
+                      <li><strong>CoAP (Constrained Application Protocol)</strong> — REST-like but runs over UDP for tiny, battery-powered devices.</li>
+                      <li><strong>WebSocket</strong> — Full-duplex channel over single TCP connection. Great for live dashboards and real-time push.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📊 MQTT Publish/Subscribe Model</h4>
+                    <ul>
+                      <li><strong>Decoupled Design</strong> — Devices publish messages to a topic (e.g., `home/temperature`) without knowing who's listening. Others subscribe to receive those messages.</li>
+                      <li><strong>Central Broker</strong> — Routes all messages. Can be public (HiveMQ) or private (Mosquitto).</li>
+                      <li><strong>QoS Levels</strong> — 0 (fire-and-forget), 1 (at least once), 2 (exactly once). Choose based on reliability needs.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>☁️ Cloud Basics for IoT</h4>
+                    <ul>
+                      <li><strong>Why Cloud?</strong> — Scalability (handle millions of devices), Pay-as-you-go, Global reach, Built-in security, Remote access from anywhere.</li>
+                      <li><strong>IoT Cloud Platforms</strong> — ThingSpeak, Blynk, Firebase. Each offers different features for data storage, visualization, and control.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🏗️ Cloud Service Models</h4>
+                    <ul>
+                      <li><strong>IaaS (Infrastructure as a Service)</strong> — Raw compute, storage, networking. You manage apps & data. Examples: AWS EC2, Azure VMs.</li>
+                      <li><strong>PaaS (Platform as a Service)</strong> — Build & deploy apps. Infrastructure managed for you. Examples: Heroku, Google App Engine.</li>
+                      <li><strong>SaaS (Software as a Service)</strong> — Ready-to-use apps. You just use them. Examples: Slack, Salesforce.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🌍 Deployment Models</h4>
+                    <ul>
+                      <li><strong>Public Cloud</strong> — AWS, Azure, GCP. Shared infrastructure, lowest cost.</li>
+                      <li><strong>Private Cloud</strong> — In-house servers. Maximum control & security, higher cost.</li>
+                      <li><strong>Hybrid</strong> — Mix of public & private. Sensitive data at home, scalable workloads in cloud.</li>
+                      <li><strong>Edge vs Cloud</strong> — Process near sensors (edge) for low latency, store in cloud for big-picture analytics.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 14 ── -->
+          <article class="timeline-item reveal" data-category="networks" id="day-14">
+            <div class="timeline-marker">
+              <div class="day-badge">14</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day14-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 03 June 2026</span>
+                  <span class="instructor-badge">🖥️ Hands-on Networking Lab</span>
+                </div>
+                <h3 class="day-title">Cisco Packet Tracer — Network Simulation Lab</h3>
+                <p class="day-summary">Practical networking using Cisco Packet Tracer simulator: building LANs, configuring routers, subnetting, and observing packet flow in real-time.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Packet Tracer</span>
+                  <span class="topic-tag">LAN Setup</span>
+                  <span class="topic-tag">Routing</span>
+                  <span class="topic-tag">Subnetting</span>
+                  <span class="topic-tag">Simulation Mode</span>
+                  <span class="topic-tag">Network Design</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day14-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>💻 Cisco Packet Tracer Overview</h4>
+                    <ul>
+                      <li><strong>What is it?</strong> — Free network simulation tool from Cisco. Drag-and-drop routers, switches, PCs, servers onto a canvas and wire them up.</li>
+                      <li><strong>Why use it?</strong> — Practice networking without physical hardware. Watch packets travel in real time. Perfect for learning.</li>
+                      <li><strong>Realistic Behavior</strong> — Simulates actual protocols: ARP, ICMP, DNS, IP routing, subnetting.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🏗️ Hands-on Builds</h4>
+                    <ul>
+                      <li><strong>Simple LAN</strong> — Connected 2+ PCs through a switch, assigned IPs, verified connectivity with `ping`.</li>
+                      <li><strong>Router Setup</strong> — Linked two separate networks through a router. Configured interfaces and default gateways for cross-network communication.</li>
+                      <li><strong>Subnetting</strong> — Split a network into subnets using subnet masks. Tested routing between subnets.</li>
+                      <li><strong>Simulation Mode</strong> — Stepped through packet flow layer-by-layer. Watched ARP resolve MAC addresses, ICMP echo requests, DNS queries.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🛠️ Key Commands Tested</h4>
+                    <ul>
+                      <li><strong>`ping <ip>`</strong> → Check if a device is reachable and measure round-trip time.</li>
+                      <li><strong>`ipconfig`</strong> → View IP address, subnet mask, gateway on a PC.</li>
+                      <li><strong>`tracert <ip>`</strong> → Trace the hop-by-hop path to a destination. Shows which routers are crossed.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🎓 Key Concepts Verified</h4>
+                    <ul>
+                      <li>How switches learn MAC addresses and forward frames</li>
+                      <li>How routers make routing decisions based on IP addresses</li>
+                      <li>How subnetting allows multiple networks to coexist</li>
+                      <li>Protocol encapsulation — each layer adds its own header</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 15 ── -->
+          <article class="timeline-item reveal" data-category="networks" id="day-15">
+            <div class="timeline-marker">
+              <div class="day-badge">15</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day15-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 04 June 2026</span>
+                  <span class="instructor-badge">☁️ Cloud & Containers</span>
+                </div>
+                <h3 class="day-title">Introduction to AWS & Docker</h3>
+                <p class="day-summary">AWS services for IoT (EC2, S3, IoT Core, Lambda), Docker containerization, and the shift from VMs to lightweight, portable containers.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">AWS</span>
+                  <span class="topic-tag">EC2 / S3</span>
+                  <span class="topic-tag">IoT Core</span>
+                  <span class="topic-tag">Docker</span>
+                  <span class="topic-tag">Containers</span>
+                  <span class="topic-tag">Scalability</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day15-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>☁️ Amazon Web Services (AWS)</h4>
+                    <ul>
+                      <li><strong>What is AWS?</strong> — World's largest cloud platform. Rent compute, storage, databases on demand instead of buying servers.</li>
+                      <li><strong>Core Services for IoT</strong> — EC2 (virtual servers), S3 (object storage), IoT Core (connect IoT devices via MQTT), Lambda (serverless functions), DynamoDB (NoSQL database).</li>
+                      <li><strong>Why Cloud for IoT?</strong> — Scalability (handle millions of devices), Pay-as-you-go pricing, Global reach, Built-in security, Remote access.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📦 Docker — Containerization</h4>
+                    <ul>
+                      <li><strong>The Problem</strong> — "It works on my machine!" Apps fail when moved to different servers due to missing dependencies.</li>
+                      <li><strong>Docker Solution</strong> — Package an app with ALL its dependencies into a lightweight, portable container. Runs the same on any machine.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🆚 Containers vs Virtual Machines</h4>
+                    <ul>
+                      <li><strong>Virtual Machine</strong> — Full guest OS per app. Heavy (GB size), slow to start, one per machine.</li>
+                      <li><strong>Container</strong> — Shares the host OS kernel. Lightweight (MB size), starts in seconds, hundreds per machine.</li>
+                      <li><strong>Docker Wins</strong> — Density, speed, simplicity, and consistency across development & production.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🛠️ Docker Core Concepts & Workflow</h4>
+                    <ul>
+                      <li><strong>Dockerfile</strong> — Recipe. Instructions to build an image (like a blueprint).</li>
+                      <li><strong>Image</strong> — Frozen, shippable snapshot. Contains app + dependencies + OS layer.</li>
+                      <li><strong>Container</strong> — Running instance of an image. The live version that actually executes.</li>
+                      <li><strong>Key Commands</strong> — `docker build` (create image from Dockerfile), `docker run` (start container), `docker ps` (list running), `docker pull` (download image from registry).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 16 ── -->
+          <article class="timeline-item reveal" data-category="iot" id="day-16">
+            <div class="timeline-marker">
+              <div class="day-badge">16</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day16-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 05 June 2026</span>
+                  <span class="instructor-badge">🔧 Phase 03 — Arduino Programming</span>
+                </div>
+                <h3 class="day-title">Arduino Programming — Setup, Pins & First Sketches</h3>
+                <p class="day-summary">Arduino Uno essentials: IDE setup, sketch structure (setup/loop), digital I/O functions, and the legendary "Blink" first project.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Arduino IDE</span>
+                  <span class="topic-tag">Digital I/O</span>
+                  <span class="topic-tag">Sketch Structure</span>
+                  <span class="topic-tag">Blink</span>
+                  <span class="topic-tag">Serial Monitor</span>
+                  <span class="topic-tag">First Project</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day16-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🎮 Meet the Arduino Uno</h4>
+                    <ul>
+                      <li><strong>Brain</strong> — ATmega328P microcontroller running at 16 MHz</li>
+                      <li><strong>I/O Pins</strong> — 14 digital (6 with PWM), 6 analog inputs, power pins</li>
+                      <li><strong>Power</strong> — 5V regulated output, can be powered via USB or external supply (7-12V recommended)</li>
+                      <li><strong>Programming</strong> — USB cable to computer, no external programmer needed. Built-in bootloader handles uploads.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📝 Anatomy of a Sketch</h4>
+                    <ul>
+                      <li><strong>`void setup()`</strong> — Runs ONCE at power-on. Initialize pins with `pinMode()`, start Serial with `Serial.begin(9600)`.</li>
+                      <li><strong>`void loop()`</strong> — Runs FOREVER, top-to-bottom repeatedly. Main program logic lives here.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔌 Core Digital I/O Functions</h4>
+                    <ul>
+                      <li><strong>`pinMode(pin, MODE)`</strong> — Set a pin as INPUT or OUTPUT</li>
+                      <li><strong>`digitalWrite(pin, HIGH/LOW)`</strong> — Turn an output pin on (5V) or off (0V)</li>
+                      <li><strong>`digitalRead(pin)`</strong> — Read HIGH or LOW from a pin (returns 1 or 0)</li>
+                      <li><strong>`delay(ms)`</strong> — Pause execution for milliseconds</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>💡 First Project — Blink the LED</h4>
+                    <p><strong>The legendary first sketch:</strong></p>
+                    <ul>
+                      <li>```cpp
+void setup() {
+  pinMode(13, OUTPUT);  // LED on pin 13
+}
+
+void loop() {
+  digitalWrite(13, HIGH);   // Turn LED on
+  delay(1000);              // Wait 1 second
+  digitalWrite(13, LOW);    // Turn LED off
+  delay(1000);              // Wait 1 second
+}
+                      ```</li>
+                      <li><strong>Result</strong> — LED blinks every 2 seconds. First time an LED blinked from my own code — felt like magic ✨</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🖥️ Serial Monitor for Debugging</h4>
+                    <ul>
+                      <li><strong>`Serial.begin(9600)`</strong> — Start serial communication at 9600 baud (bits per second)</li>
+                      <li><strong>`Serial.println(value)`</strong> — Print a value to Serial Monitor on the computer. Simplest way to see what your board is thinking.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 17 ── -->
+          <article class="timeline-item reveal" data-category="iot" id="day-17">
+            <div class="timeline-marker">
+              <div class="day-badge">17</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day17-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 06-08 June 2026</span>
+                  <span class="instructor-badge">🔧 Phase 03 — Arduino Programming</span>
+                </div>
+                <h3 class="day-title">Sensors, Analog Input & Actuators</h3>
+                <p class="day-summary">Reading the analog world: ADC for sensors (TMP36, DHT11, HC-SR04, LDR), PWM for output control, and driving physical actuators (LEDs, motors, servos).</p>
+                <div class="day-topics">
+                  <span class="topic-tag">analogRead</span>
+                  <span class="topic-tag">Analog Sensors</span>
+                  <span class="topic-tag">PWM</span>
+                  <span class="topic-tag">Servos</span>
+                  <span class="topic-tag">Motors</span>
+                  <span class="topic-tag">Actuators</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day17-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>📊 Analog vs Digital on Arduino</h4>
+                    <ul>
+                      <li><strong>`analogRead(pin)`</strong> — Returns 0–1023 (10-bit ADC), mapping 0–5V input. Each step = 5V/1024 ≈ 4.9 mV</li>
+                      <li><strong>Convert to Voltage</strong> — V = reading × (5.0 / 1023)</li>
+                      <li><strong>`analogWrite(pin, 0–255)`</strong> — PWM (Pulse Width Modulation) "fake analog" output for dimming & speed control. 255 = always on, 0 = always off.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🌡️ Sensors Explored</h4>
+                    <ul>
+                      <li><strong>TMP36 / LM35</strong> — Analog temperature sensors. Voltage output scales linearly with °C. Easy to read with `analogRead()`</li>
+                      <li><strong>HC-SR04</strong> — Ultrasonic distance sensor. Measures echo time-of-flight. Returns distance in cm.</li>
+                      <li><strong>DHT11</strong> — Digital temperature + humidity sensor on a single pin. More complex but gives two readings.</li>
+                      <li><strong>LDR / IR</strong> — Light-dependent & infrared sensors. Useful for detecting light levels, motion, obstacle avoidance.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>⚙️ Actuators — Driving the Physical World</h4>
+                    <ul>
+                      <li><strong>LEDs</strong> — Simplest output. Digital on/off or dimmed with PWM.</li>
+                      <li><strong>Buzzers</strong> — Sound alerts. Digital on/off or frequency control.</li>
+                      <li><strong>DC Motors</strong> — Continuous rotation. Driven through a transistor or motor driver (L298N). Speed controlled with PWM.</li>
+                      <li><strong>Servo Motors</strong> — Precise angle control (0–180°). Uses `Servo.h` library and `myServo.write(angle)`. Perfect for robotics, gates, arms.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🎯 `map()` — The Handiest Function</h4>
+                    <ul>
+                      <li><strong>Syntax</strong> — `map(value, fromLow, fromHigh, toLow, toHigh)`</li>
+                      <li><strong>Example</strong> — `map(analogRead(A0), 0, 1023, 0, 180)` converts a potentiometer read (0–1023) into a servo angle (0–180°)</li>
+                      <li><strong>Why it rocks</strong> — Scales any range to any other range. Perfect for sensor-to-actuator mapping.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔧 Common Patterns</h4>
+                    <ul>
+                      <li>Read a temperature sensor → convert to °C → print to Serial → actuate a fan if too hot</li>
+                      <li>Dim an LED with a potentiometer using PWM</li>
+                      <li>Sweep a servo from 0° to 180° and back in a loop</li>
+                      <li>Sound a buzzer when an ultrasonic sensor detects an object closer than 10 cm</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div><!-- /timeline -->
       </div>
     </section>
