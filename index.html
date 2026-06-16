@@ -1445,6 +1445,193 @@ void loop() {
             </div>
           </article>
 
+          <!-- ── DAY 19 ── -->
+          <article class="timeline-item reveal" data-category="iot" id="day-19">
+            <div class="timeline-marker">
+              <div class="day-badge">19</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day19-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 11-12 June 2026</span>
+                  <span class="instructor-badge">🚀 Phase 03 — Real-World Projects</span>
+                </div>
+                <h3 class="day-title">Sensors & Actuators Projects Continue</h3>
+                <p class="day-summary">Build complete IoT projects combining multiple sensors and actuators. Integrate hardware, code logic, and real-world use cases into working prototypes.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Project Design</span>
+                  <span class="topic-tag">Multiple Sensors</span>
+                  <span class="topic-tag">Actuators</span>
+                  <span class="topic-tag">Integration</span>
+                  <span class="topic-tag">Testing</span>
+                  <span class="topic-tag">Prototyping</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day19-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🎯 Building an Integrated Project</h4>
+                    <ul>
+                      <li><strong>Sensor + Logic + Actuator</strong> — Read data from sensors, process it with conditional logic, and trigger actuators based on thresholds.</li>
+                      <li><strong>Example projects</strong> — Temperature-controlled ventilation, motion-triggered alerts, smart lighting based on ambient light and time, distance-based object detection.</li>
+                      <li><strong>Debugging strategy</strong> — Use Serial Monitor throughout to verify sensor readings and actuator commands at each stage.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔧 Project Architecture</h4>
+                    <ul>
+                      <li><strong>Sensor layer</strong> — Read analog/digital inputs with stable timing using millis(). Avoid blocking delays.</li>
+                      <li><strong>Processing layer</strong> — Apply math (map, thresholds, filtering) and state management to sensor data.</li>
+                      <li><strong>Actuator layer</strong> — Output PWM, digital signals, or serial commands to control LEDs, motors, relays, and servos.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🧪 Testing & Validation</h4>
+                    <ul>
+                      <li>Test each sensor in isolation with known inputs and measure outputs on Serial Monitor.</li>
+                      <li>Test each actuator independently to confirm speed, direction, and control range.</li>
+                      <li>Integrate all components gradually and verify the complete system responds correctly to live conditions.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>💡 Real-World Considerations</h4>
+                    <ul>
+                      <li><strong>Noise & Filtering</strong> — Analog sensors are noisy; use averaging or low-pass filters to smooth data.</li>
+                      <li><strong>Power Management</strong> — Multiple actuators draw current; use a power supply rated for peak load.</li>
+                      <li><strong>Calibration</strong> — Adjust sensor offsets and scaling for accurate readings in your specific environment.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 20 ── -->
+          <article class="timeline-item reveal" data-category="iot" id="day-20">
+            <div class="timeline-marker">
+              <div class="day-badge">20</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day20-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 13-14 June 2026</span>
+                  <span class="instructor-badge">📚 Self-Study & Consolidation</span>
+                </div>
+                <h3 class="day-title">Comprehensive Review: Day 1–19 & Full Growth</h3>
+                <p class="day-summary">Consolidate all learning from Day 1 through Day 19. Review core Arduino concepts, sensor-actuator patterns, IoT workflows, and project best practices. Build confidence and identify knowledge gaps.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Review</span>
+                  <span class="topic-tag">Consolidation</span>
+                  <span class="topic-tag">Deep Dive</span>
+                  <span class="topic-tag">Best Practices</span>
+                  <span class="topic-tag">Self-Study</span>
+                  <span class="topic-tag">Growth</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day20-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🎓 Phase 01 Recap: Arduino Essentials</h4>
+                    <ul>
+                      <li><strong>Setup & Loop</strong> — Understanding program structure, pinMode, digitalWrite, digitalRead, delay, and millis for timing.</li>
+                      <li><strong>Serial Communication</strong> — Debugging output, baud rates, reading from Serial Monitor, and sending commands to Arduino.</li>
+                      <li><strong>First Project</strong> — LED blinking, understanding timing loops, and basic logic flow.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔌 Phase 02 Recap: Advanced I/O</h4>
+                    <ul>
+                      <li><strong>Analog I/O</strong> — analogRead (ADC 0–1023), analogWrite (PWM 0–255), and voltage conversions.</li>
+                      <li><strong>Interrupts</strong> — attachInterrupt for responsive, non-blocking event handling.</li>
+                      <li><strong>Libraries</strong> — Servo, Liquid Crystal, and custom function organization for larger projects.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📊 Phase 03 Recap: Sensors & Actuators</h4>
+                    <ul>
+                      <li><strong>Common Sensors</strong> — Temperature (TMP36), distance (HC-SR04), humidity (DHT11), light (LDR), motion (PIR).</li>
+                      <li><strong>Actuators</strong> — LEDs, buzzers, DC motors, servo motors, relays.</li>
+                      <li><strong>Integration Patterns</strong> — Reading sensor data, processing with logic, and driving actuators based on conditions.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🚀 Strength Anchors & Growth Areas</h4>
+                    <ul>
+                      <li><strong>Strengths</strong> — Identify topics where you feel confident: GPIO control, sensor reading, PWM output, etc.</li>
+                      <li><strong>Growth Areas</strong> — Spot concepts that feel unclear: interrupt handling, library creation, complex state machines.</li>
+                      <li><strong>Next Steps</strong> — Plan deeper dives into weak areas, experiment with new libraries, or rebuild projects from scratch to solidify learning.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 21 ── -->
+          <article class="timeline-item reveal" data-category="iot" id="day-21">
+            <div class="timeline-marker">
+              <div class="day-badge">21</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day21-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 15 June 2026</span>
+                  <span class="instructor-badge">🧪 Assessment & Knowledge Check</span>
+                </div>
+                <h3 class="day-title">Knowledge Test & Assessment</h3>
+                <p class="day-summary">Practical assessment to evaluate understanding across all Arduino and IoT concepts from Days 1–20. Test your skills with real-world scenarios and identify confidence levels before advancing.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Assessment</span>
+                  <span class="topic-tag">Knowledge Test</span>
+                  <span class="topic-tag">Practical Challenges</span>
+                  <span class="topic-tag">Problem-Solving</span>
+                  <span class="topic-tag">Feedback</span>
+                  <span class="topic-tag">Improvement</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day21-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>📝 Test Structure</h4>
+                    <ul>
+                      <li><strong>Conceptual Questions</strong> — What does pinMode(13, OUTPUT) do? How does PWM differ from digital GPIO? When do you use millis() vs delay()?</li>
+                      <li><strong>Code Snippets</strong> — Read and predict output. Identify bugs in provided Arduino sketches.</li>
+                      <li><strong>Circuit Diagrams</strong> — Wire sensors and actuators correctly. Identify pinouts and signal types.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🎯 Practical Challenges</h4>
+                    <ul>
+                      <li><strong>Challenge 1</strong> — Build a temperature alarm: read a TMP36, print °C to Serial, trigger a buzzer if temp > 25°C.</li>
+                      <li><strong>Challenge 2</strong> — Create a servo controller: use a potentiometer to control a servo's angle (0–180°).</li>
+                      <li><strong>Challenge 3</strong> — Motion detection system: read a PIR sensor and flash an LED for 5 seconds when motion detected.</li>
+                      <li><strong>Challenge 4</strong> — Integrate all three: combine temperature, servo, and motion into a single coherent project.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>✅ Evaluation Criteria</h4>
+                    <ul>
+                      <li><strong>Correctness</strong> — Does the code compile and run without errors? Do sensors read correctly?</li>
+                      <li><strong>Efficiency</strong> — Is the code non-blocking? Are delays avoided? Are resources used wisely?</li>
+                      <li><strong>Understanding</strong> — Can you explain your code? Do you understand why each line is there?</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🚀 Next Steps & Feedback</h4>
+                    <ul>
+                      <li><strong>Scoring</strong> — Evaluate each challenge on functionality, code quality, and problem-solving approach.</li>
+                      <li><strong>Feedback</strong> — Identify strengths and areas for improvement based on test results.</li>
+                      <li><strong>Advancement Path</strong> — Plan next phases: wireless communication (Bluetooth/Wi-Fi), advanced libraries, or full IoT projects.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div><!-- /timeline -->
       </div>
     </section>
