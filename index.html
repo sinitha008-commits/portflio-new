@@ -584,6 +584,94 @@
             </div>
           </article>
 
+          <!-- ── DAY 7 ── -->
+          <article class="timeline-item reveal" data-category="digital" id="day-7">
+            <div class="timeline-marker">
+              <div class="day-badge">7</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day7-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 29 May 2026</span>
+                  <span class="instructor-badge">👨‍🏫 Dr. Vineeth — Digital Electronics</span>
+                </div>
+                <h3 class="day-title">Logic Gates & Boolean Algebra — Foundation of Digital Systems</h3>
+                <p class="day-summary">Deep exploration of logic gates, Boolean algebra theorems, gate combinations, NAND/NOR universal gates, and practical circuit design with simplification techniques.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Logic Gates</span>
+                  <span class="topic-tag">Boolean Algebra</span>
+                  <span class="topic-tag">De Morgan's Laws</span>
+                  <span class="topic-tag">NAND/NOR</span>
+                  <span class="topic-tag">Gate Design</span>
+                  <span class="topic-tag">Truth Tables</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day7-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🔌 Fundamental Logic Gates</h4>
+                    <ul>
+                      <li><strong>AND Gate</strong> — Output = 1 only if ALL inputs are 1. Symbol: Y = A · B (dot represents AND)</li>
+                      <li><strong>OR Gate</strong> — Output = 1 if ANY input is 1. Symbol: Y = A + B (plus represents OR)</li>
+                      <li><strong>NOT Gate (Inverter)</strong> — Inverts input. 0 → 1, 1 → 0. Symbol: Y = Ā (bar over A)</li>
+                      <li><strong>NAND Gate</strong> — NOT-AND. Output = 0 only if ALL inputs are 1. Universal gate for all logic.</li>
+                      <li><strong>NOR Gate</strong> — NOT-OR. Output = 1 only if ALL inputs are 0. Also universal gate.</li>
+                      <li><strong>XOR Gate (Exclusive OR)</strong> — Output = 1 if inputs are different. Y = A ⊕ B</li>
+                      <li><strong>XNOR Gate (Exclusive NOR)</strong> — Output = 1 if inputs are same. Y = A ⊙ B</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📊 Boolean Algebra Laws & Theorems</h4>
+                    <ul>
+                      <li><strong>Commutative Law</strong> — A + B = B + A, A · B = B · A</li>
+                      <li><strong>Associative Law</strong> — (A + B) + C = A + (B + C), (A · B) · C = A · (B · C)</li>
+                      <li><strong>Distributive Law</strong> — A · (B + C) = AB + AC, A + (B · C) = (A + B) · (A + C)</li>
+                      <li><strong>Idempotent Law</strong> — A + A = A, A · A = A</li>
+                      <li><strong>Null/Domination Law</strong> — A + 1 = 1, A · 0 = 0</li>
+                      <li><strong>Identity Law</strong> — A + 0 = A, A · 1 = A</li>
+                      <li><strong>Involution Law</strong> — (Ā) = A (double negation)</li>
+                      <li><strong>Complement Law</strong> — A + Ā = 1, A · Ā = 0</li>
+                      <li><strong>De Morgan's Theorems</strong> — ⁻⁻⁻⁻⁻⁻ = Ā + B̄ (NAND = OR of inverted inputs)</li>
+                      <li style="margin-top: 0;">and (A + B) = Ā · B̄ (NOR = AND of inverted inputs)</li>
+                      <li><strong>Absorption Law</strong> — A + AB = A, A · (A + B) = A</li>
+                      <li><strong>Redundancy Theorem</strong> — A + ĀB = A + B</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔨 Gate Implementation & Design</h4>
+                    <ul>
+                      <li><strong>Universal Gates (NAND & NOR)</strong> — All logic functions can be built using only NAND gates or only NOR gates. Cost optimization in IC manufacturing.</li>
+                      <li><strong>Multi-input Gates</strong> — Cascading simple gates. 3-input AND = two 2-input ANDs. Propagation delay increases with cascade levels.</li>
+                      <li><strong>Gate Complexity & Speed Trade-offs</strong> — More gates = higher delay but potentially lower power. CMOS vs TTL implementations.</li>
+                      <li><strong>SOP (Sum of Products) vs POS (Product of Sums)</strong> — Expression forms for circuit realization. SOP uses AND-OR, POS uses OR-AND.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🎯 Practical Applications</h4>
+                    <ul>
+                      <li><strong>Comparator Circuits</strong> — Using XOR to detect equality, greater/lesser logic with cascaded gates.</li>
+                      <li><strong>Parity Checker</strong> — Uses XOR gates to detect even/odd parity for error detection in data transmission.</li>
+                      <li><strong>ALU (Arithmetic Logic Unit)</strong> — Core of CPU combining logic gates for arithmetic and logical operations.</li>
+                      <li><strong>Multiplexer Implementation</strong> — Logic gates select data lines based on address inputs.</li>
+                      <li><strong>Decoder & Encoder</strong> — Built from combinations of AND/NAND/OR gates with negation.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📝 Key Takeaways & Design Process</h4>
+                    <ul>
+                      <li><strong>Problem → Truth Table</strong> — Start with Boolean expression or truth table.</li>
+                      <li><strong>Simplification</strong> — Use K-Maps, Boolean algebra to minimize gates and power consumption.</li>
+                      <li><strong>Implementation</strong> — Choose gate types (NAND/NOR preferred for IC fabrication).</li>
+                      <li><strong>Verification</strong> — Test with all input combinations using breadboards or simulators before PCB design.</li>
+                      <li><strong>Optimization</strong> — Balance speed, power, area, and cost for target application.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div><!-- /timeline -->
       </div>
     </section>
