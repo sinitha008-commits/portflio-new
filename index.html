@@ -672,6 +672,169 @@
             </div>
           </article>
 
+          <!-- ── DAY 8 ── -->
+          <article class="timeline-item reveal" data-category="digital" id="day-8">
+            <div class="timeline-marker">
+              <div class="day-badge">8</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day8-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 29 May 2026</span>
+                  <span class="instructor-badge">👨‍🏫 Dr. Vineeth — Digital Electronics (Continued)</span>
+                </div>
+                <h3 class="day-title">Combinational Circuits — Adders, MUX, Decoders</h3>
+                <p class="day-summary">Deep dive into combinational logic: half/full adders & subtractors, multiplexers & demultiplexers, encoders & decoders, and network analysis techniques.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Half Adder</span>
+                  <span class="topic-tag">Full Adder</span>
+                  <span class="topic-tag">MUX / DEMUX</span>
+                  <span class="topic-tag">Encoder</span>
+                  <span class="topic-tag">Decoder</span>
+                  <span class="topic-tag">Synthesis</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day8-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>➕ Half Adder & Full Adder</h4>
+                    <ul>
+                      <li><strong>Half Adder</strong> — Adds two single-bit numbers A and B.</li>
+                      <li style="margin-top: 0;">Sum: S = A ⊕ B (XOR), Carry: C = A · B (AND)</li>
+                      <li><strong>Full Adder</strong> — Adds three bits (A, B, Carry-in) using two half adders + one OR gate.</li>
+                      <li style="margin-top: 0;">Sum: S = A ⊕ B ⊕ Cᵢₙ, Carry-out: Cₒᵤₜ = AB + Cᵢₙ(A ⊕ B)</li>
+                      <li><strong>Multi-bit Addition</strong> — Full adders cascaded for n-bit arithmetic (e.g., 8-bit adder uses 8 full adders).</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>➖ Half & Full Subtractor</h4>
+                    <ul>
+                      <li><strong>Half Subtractor</strong> — Subtracts one-bit B from A.</li>
+                      <li style="margin-top: 0;">Difference: D = A ⊕ B, Borrow: Bₒᵤₜ = Ā · B</li>
+                      <li><strong>Full Subtractor</strong> — Subtracts including borrow input.</li>
+                      <li style="margin-top: 0;">Difference: D = A ⊕ B ⊕ Bᵢₙ, Borrow: Bₒᵤₜ = ĀB + ĀBᵢₙ + BBᵢₙ</li>
+                      <li><strong>Cascading</strong> — Multiple subtractors for multi-bit subtraction.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔀 Multiplexer (MUX) & Demultiplexer (DEMUX)</h4>
+                    <ul>
+                      <li><strong>MUX — Data Selector</strong> — Routes one of many inputs to a single output. Uses selection lines (S₁, S₀ for 4:1).</li>
+                      <li style="margin-top: 0;">Formula (4:1): Y = S₁'S₀'I₀ + S₁'S₀I₁ + S₁S₀'I₂ + S₁S₀I₃</li>
+                      <li><strong>DEMUX — Data Distributor</strong> — Routes a single input to one of many outputs based on selection lines.</li>
+                      <li style="margin-top: 0;">1:4 DEMUX: Distributes input D to Y₀–Y₃ based on selection.</li>
+                      <li><strong>Applications</strong> — MUX for data selection & time-division multiplexing. DEMUX for data distribution & memory addressing.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔢 Encoders & Decoders</h4>
+                    <ul>
+                      <li><strong>Encoder (8:3)</strong> — Converts 2ⁿ input lines to n output lines (binary code). Example: active line 4 → outputs 100.</li>
+                      <li style="margin-top: 0;">Priority encoder handles multiple active inputs by prioritizing the highest.</li>
+                      <li><strong>Decoder (3:8)</strong> — Converts n input lines to 2ⁿ output lines. Activates exactly one output based on binary input.</li>
+                      <li style="margin-top: 0;">Uses: Memory addressing, 7-segment display control, address decoding in microprocessors.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🛠️ Network Analysis & Synthesis</h4>
+                    <ul>
+                      <li><strong>Analysis</strong> — Given a circuit → Find current, voltage, power using KCL, KVL, Mesh, Nodal analysis, Superposition, Thevenin, Norton.</li>
+                      <li><strong>Synthesis</strong> — Given desired function → Design circuit using AND, OR, NOT gates (Sum-of-Products form).</li>
+                      <li><strong>Design Flow</strong> — Truth Table → Boolean Expression → Simplification (K-Map) → Gate Implementation → Verification.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── DAY 9 ── -->
+          <article class="timeline-item reveal" data-category="digital" id="day-9">
+            <div class="timeline-marker">
+              <div class="day-badge">9</div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header" role="button" tabindex="0" aria-expanded="false" aria-controls="day9-content">
+                <div class="day-meta">
+                  <span class="date-badge">📅 29 May 2026</span>
+                  <span class="instructor-badge">👨‍🏫 Dr. Vineeth — Digital Electronics (Continued)</span>
+                </div>
+                <h3 class="day-title">Sequential Logic — Flip-Flops & State Machines</h3>
+                <p class="day-summary">Foundation of digital memory: flip-flops, counters, state diagrams, and systematic design of sequential circuits using state assignment and K-Map minimization.</p>
+                <div class="day-topics">
+                  <span class="topic-tag">Flip-Flops</span>
+                  <span class="topic-tag">SR / JK / D / T</span>
+                  <span class="topic-tag">State Diagrams</span>
+                  <span class="topic-tag">Counters</span>
+                  <span class="topic-tag">FSM Design</span>
+                  <span class="topic-tag">State Assignment</span>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="day-content" id="day9-content">
+                <div class="content-inner">
+                  <div class="content-section">
+                    <h4>🔑 Combinational vs Sequential Logic</h4>
+                    <ul>
+                      <li><strong>Combinational</strong> — Output depends ONLY on present inputs. Examples: adders, decoders, multiplexers.</li>
+                      <li><strong>Sequential</strong> — Output depends on present inputs + previous states (has memory). Examples: counters, FSMs, digital clocks.</li>
+                      <li><strong>Memory Element</strong> — Flip-flops store state information, enabling circuits to remember past events.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>⏱️ Synchronous vs Asynchronous Sequential Logic</h4>
+                    <ul>
+                      <li><strong>Synchronous</strong> — Uses clock signal. State changes at clock pulses. Easier to design, predictable timing.</li>
+                      <li style="margin-top: 0;">Examples: counters, registers, digital clocks.</li>
+                      <li><strong>Asynchronous</strong> — No clock. State changes immediately on input change. Faster but complex to design.</li>
+                      <li style="margin-top: 0;">Examples: ripple counters, SR latches.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>💾 Flip-Flop Types & Their Characteristics</h4>
+                    <ul>
+                      <li><strong>SR Flip-Flop (Set-Reset)</strong> — S=1 → Q=1, R=1 → Q=0. Condition S=R=1 is INVALID (undefined state).</li>
+                      <li><strong>JK Flip-Flop</strong> — Improved SR. J=K=1 → Toggle (Q switches state). No invalid condition. Most versatile.</li>
+                      <li><strong>D Flip-Flop (Data)</strong> — Stores input directly. D=0 → Q=0, D=1 → Q=1. Simplest to use for design.</li>
+                      <li><strong>T Flip-Flop (Toggle)</strong> — T=0 → no change, T=1 → toggle/invert Q. Core for binary counters.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>📋 Design Steps for Sequential Circuits</h4>
+                    <ul>
+                      <li><strong>Step 1:</strong> Understand the problem — Identify inputs, outputs, and required states.</li>
+                      <li><strong>Step 2:</strong> Draw state diagram — Circles represent states, arrows show transitions with labels.</li>
+                      <li><strong>Step 3:</strong> Create state table — Maps (present state, input) → (next state, output).</li>
+                      <li><strong>Step 4:</strong> State assignment — Assign binary codes to states (e.g., State A=00, B=01, C=10, D=11).</li>
+                      <li><strong>Step 5:</strong> Choose flip-flop type — D is simplest for most designs.</li>
+                      <li><strong>Step 6:</strong> Derive flip-flop input equations — Use K-Maps to minimize combinational logic.</li>
+                      <li><strong>Step 7:</strong> Draw logic circuit diagram — Connect flip-flops, gates, and test.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🎯 State Assignment Methods & Optimization</h4>
+                    <ul>
+                      <li><strong>Binary Assignment</strong> — Assign states in binary order (A=00, B=01, C=10, D=11).</li>
+                      <li><strong>Gray Code Assignment</strong> — Adjacent states differ by only one bit. Minimizes glitches and timing hazards.</li>
+                      <li><strong>One-Hot Encoding</strong> — Each state uses one flip-flop (A=0001, B=0010, C=0100, D=1000). Faster decoding but more flip-flops.</li>
+                      <li><strong>State Reduction</strong> — Identify and merge equivalent states to minimize hardware. Fewer flip-flops = simpler design.</li>
+                    </ul>
+                  </div>
+                  <div class="content-section">
+                    <h4>🔄 Practical Applications</h4>
+                    <ul>
+                      <li><strong>Binary Counter</strong> — Uses cascaded T flip-flops. Increments on each clock pulse. Forms basis of frequency dividers.</li>
+                      <li><strong>Modulo-N Counter</strong> — Counts from 0 to N-1, then resets. Uses decode logic to reset at specific state.</li>
+                      <li><strong>Traffic Light Controller FSM</strong> — Red → Green → Yellow → Red. Each state has duration; transitions on timer.</li>
+                      <li><strong>Shift Registers</strong> — Data shifted left/right with each clock pulse. Used for serial-to-parallel conversion.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div><!-- /timeline -->
       </div>
     </section>
